@@ -1,0 +1,24 @@
+{
+    "presets": [
+      ["env", {
+        "modules": false,
+        "targets": {
+          "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+        }
+      }],
+      "stage-0",
+      "react"
+    ],
+    "plugins": [
+      "transform-runtime", 
+      "react-hot-loader/babel",
+      "transform-decorators-legacy",
+      ["import", { "libraryName": "redux-persist", "libraryDirectory": "es"}, "redux-persist"]
+    ],
+    "env": {
+      "test": {
+        "presets": ["env", "stage-0", "react"],
+        "plugins": ["istanbul"]
+      }
+    }
+  }
