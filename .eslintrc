@@ -8,8 +8,7 @@
 		"react" 
 	],
 	"rules": {
-		"no-unused-vars": 0,
-		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
+		"no-unused-vars": 2,
 		"no-tabs": "off",
 		"editor.tabSize": "4",
 		"indent": [2, "tab", { "SwitchCase": 1 }],
@@ -36,7 +35,14 @@
 		"no-spaced-func": 2,
 		"no-multiple-empty-lines": [2, {"max": 2}],
 		"no-new-object": 2,
-		"no-extra-parens": 1
+		"no-extra-parens": 1,
+		"comma-dangle": 2,
+		"react/display-name": 0,
+		"react/prefer-es6-class": 2,
+		"react/no-deprecated": 1,
+		"react/jsx-uses-react": 1,
+		"react/jsx-uses-vars": 2,
+		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }]
 	},
 	"settings": {
 		"import/ignore": [

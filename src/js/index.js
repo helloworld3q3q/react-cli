@@ -7,7 +7,6 @@ import RootRoute from './router/rootRoute'; // 所有定义好的路由
 import '../less/reset.less';
 
 
-
 const Loading = () => <div>loading</div>;
 
 ReactDOM.render(
