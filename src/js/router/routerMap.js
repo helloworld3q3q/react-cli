@@ -6,7 +6,6 @@ const Login = asyncComponent(() => {
 });
 
 
-
 export default [
 	{ path: '/', component: Login, name: 'Login'},
 ];
