@@ -4,7 +4,7 @@ const { all, call, fork, takeEvery } = effects;
 
 
 export default function* rootSaga() {
-    yield all([
-        takeEvery('LOGIN', loginStatusSaga),
-    ]);
+	yield all([
+		takeEvery('LOGIN', loginStatusSaga),
+	]);
 }

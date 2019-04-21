@@ -5,11 +5,11 @@ import  { persistReducer } from 'redux-persist/es';
 
 
 export default function configureStore(initStore = {}) {
-   
-    const createStoreMiddleware = applyMiddleware(...middlewares)(createStore);
-    const store = createStoreMiddleware(
-        persistReducer(storageConfig, createReducer()), initStore
-    );
 
-    return store
+	const createStoreMiddleware = applyMiddleware(...middlewares)(createStore);
+	const store = createStoreMiddleware(
+		persistReducer(storageConfig, createReducer()), initStore
+	);
+
+	return store;
 }

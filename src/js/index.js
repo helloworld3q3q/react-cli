@@ -11,6 +11,6 @@ import '../less/reset.less';
 const Loading = () => <div>loading</div>;
 
 ReactDOM.render(
-    <RootRoute/>, 
-    document.getElementById('root')
-); 
+	<RootRoute/>,
+	document.getElementById('root')
+);

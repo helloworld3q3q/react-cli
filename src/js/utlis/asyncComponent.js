@@ -8,26 +8,26 @@
 import React, { Component, PureComponent } from 'react';
 
 const asyncComponent = (importComponent) => {
-    return class extends Component {
-        constructor(props) {
-            super(props);
-            this.state = {
-                component: null
-            }
-        }
+	return class AsyncComponent extends Component {
+		constructor(props) {
+			super(props);
+			this.state = {
+				component: null
+			};
+		}
 
-        componentDidMount() {
-            importComponent().then(cmp => {
-                this.setState({
-                    component: cmp.default
-                });
-            });
-        }
-        render() {
-            let C = this.state.component;
-            return C ? <C {...this.props}/> : null
-        }
-    }
-}
+		componentDidMount() {
+			importComponent().then(cmp => {
+				this.setState({
+					component: cmp.default
+				});
+			});
+		}
+		render() {
+			let C = this.state.component;
+			return C ? <C {...this.props}/> : null;
+		}
+	};
+};
 
 export default asyncComponent;

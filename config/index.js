@@ -1,5 +1,5 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
-var path = require('path')
+var path = require('path');
 
 module.exports = {
 	build: {
@@ -24,26 +24,26 @@ module.exports = {
 	dev: {
 		env: require('./dev.env'),
 		port: 3333,
+		https:true,
 		autoOpenBrowser: true,
 		assetsSubDirectory: 'static',
 		assetsPublicPath: '/',
 		proxyTable: {
-			// '/': {
-			//   target: 'http://www.***',
-			//   changeOrigin: true,  //是否跨域
-			//   pathRewrite: {
-			// 	'^/admin': '/admin',
-			//   }
-			// },
-		  },
+			/* '/': {
+			  target: '',
+			  changeOrigin: true,  //是否跨域
+			  pathRewrite: {
+				'^/': '/',
+			  }
+			}, */
+		},
 		// CSS Sourcemaps off by default because relative paths are "buggy"
 		// with this option, according to the CSS-Loader README
 		// (https://github.com/webpack/css-loader#sourcemaps)
 		// In our experience, they generally work as expected,
 		// just be aware of this issue when enabling this option.
-		cssSourceMap: false
+		cssSourceMap: true
 	},
-	// 提取出的文件链接
 	externalsCss_dev:[
 		'https://cdn.bootcss.com/Swiper/4.4.6/css/swiper.min.css'
 	],
@@ -73,4 +73,4 @@ module.exports = {
 		'https://cdn.bootcss.com/axios/0.19.0-beta.1/axios.min.js',
 	],
 	title: '初始化' //模板标题
-}
+};
