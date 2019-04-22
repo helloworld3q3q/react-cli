@@ -5,7 +5,7 @@
  * @modify date 2018-11-22 17:18:46
  * @desc [异步加载组建模块]
 */
-import React, { Component, PureComponent } from 'react';
+import React, { Component } from 'react';
 
 const asyncComponent = (importComponent) => {
 	return class AsyncComponent extends Component {
