@@ -22,7 +22,6 @@ module.exports = {
 		libraryTarget: 'umd'	//用于外部引入的 react.js 等
 	},
 	resolve: {
-		//extensions: ['.js', '.vue', '.json'],
 		extensions: ['.js', '.json'],
 		alias: {
 			// 'vue$': 'vue/dist/vue.esm.js',
@@ -37,15 +36,7 @@ module.exports = {
 				loader: 'babel-loader',
 				include: [resolve('src'), resolve('test')],
 				exclude: [resolve('node_modules')], 	//在node_modules的文件不被babel理会
-				query: {
-					plugins: ['transform-decorators-legacy'],
-					presets: ['react', 'stage-0']
-				}
 			},
-			/* 	{
-				test: /\.(less|css)$/,
-    			use:['style-loader','css-loader', 'less-loader'],
-			}, */
 			{
 				test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
 				loader: 'url-loader',
@@ -113,69 +104,67 @@ module.exports = {
 	},
 	// 单独提取出 react 减小打包文件大小
 	externals: {
-		jquery: 'jQuery',
-		layer: 'layer',
-		'redux': {
-			amd: 'redux',
-			root: 'Redux',
-			commonjs: 'redux',
-			commonjs2: 'redux'
-		},
-		'redux-saga': {
-			amd: 'redux-saga',
-			root: 'ReduxSaga',
-			commonjs: 'redux-saga',
-			commonjs2: 'redux-saga'
-		},
-		'redux-saga/effects': {
-			amd: 'redux-saga/effects',
-			root: 'ReduxSaga/Effects',
-			commonjs: 'redux-saga/effects',
-			commonjs2: 'redux-saga/effects'
-		},
-		'react-redux': {
-			amd: 'react-redux',
-			root: 'ReactRedux',
-			commonjs: 'react-redux',
-			commonjs2: 'react-redux'
-		},
-		'moment': {
-			amd: 'moment',
-			root: 'moment',
-			commonjs: 'moment',
-			commonjs2: 'moment'
-		},
-		'react-router-dom': {
-			amd: 'react-router-dom',
-			root: 'ReactRouterDOM',
-			commonjs: 'react-router-dom',
-			commonjs2: 'react-router-dom'
-		},
-		'react': {
-			amd: 'react',
-			root: 'React',
-			commonjs: 'react',
-			commonjs2: 'react'
-		},
-		'react-dom': {
-			amd: 'react-dom',
-			root: 'ReactDOM',
-			commonjs: 'react-dom',
-			commonjs2: 'react-dom'
-		},
-		'axios': {
-			amd: 'axios',
-			root: 'axios',
-			commonjs: 'axios',
-			commonjs2: 'axios'
-		},
-		'Swiper': {
-			amd: 'Swiper',
-			root: 'Swiper',
-			commonjs: 'Swiper',
-			commonjs2: 'Swiper'
-		},
-		'AMap': 'AMap',
+		// 'redux': {
+		// 	amd: 'redux',
+		// 	root: 'Redux',
+		// 	commonjs: 'redux',
+		// 	commonjs2: 'redux'
+		// },
+		// 'redux-saga': {
+		// 	amd: 'redux-saga',
+		// 	root: 'ReduxSaga',
+		// 	commonjs: 'redux-saga',
+		// 	commonjs2: 'redux-saga'
+		// },
+		// 'redux-saga/effects': {
+		// 	amd: 'redux-saga/effects',
+		// 	root: 'ReduxSaga/Effects',
+		// 	commonjs: 'redux-saga/effects',
+		// 	commonjs2: 'redux-saga/effects'
+		// },
+		// 'react-redux': {
+		// 	amd: 'react-redux',
+		// 	root: 'ReactRedux',
+		// 	commonjs: 'react-redux',
+		// 	commonjs2: 'react-redux'
+		// },
+		// 'moment': {
+		// 	amd: 'moment',
+		// 	root: 'moment',
+		// 	commonjs: 'moment',
+		// 	commonjs2: 'moment'
+		// },
+		// 'react-router-dom': {
+		// 	amd: 'react-router-dom',
+		// 	root: 'ReactRouterDOM',
+		// 	commonjs: 'react-router-dom',
+		// 	commonjs2: 'react-router-dom'
+		// },
+		// 'react': {
+		// 	amd: 'react',
+		// 	root: 'React',
+		// 	commonjs: 'react',
+		// 	commonjs2: 'react'
+		// },
+		// 'react-dom': {
+		// 	amd: 'react-dom',
+		// 	root: 'ReactDOM',
+		// 	commonjs: 'react-dom',
+		// 	commonjs2: 'react-dom'
+		// },
+		// 'axios': {
+		// 	amd: 'axios',
+		// 	root: 'axios',
+		// 	commonjs: 'axios',
+		// 	commonjs2: 'axios'
+		// },
+		// 'Swiper': {
+		// 	amd: 'Swiper',
+		// 	root: 'Swiper',
+		// 	commonjs: 'Swiper',
+		// 	commonjs2: 'Swiper'
+		// },
+		// 'AMap': 'AMap',
 		// 'redux-persist': {
 		//     amd: 'redux-persist',
 		//     root: 'redux-persist',

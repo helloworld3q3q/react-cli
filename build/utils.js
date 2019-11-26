@@ -15,12 +15,12 @@ exports.cssLoaders = function (options, booLocal) {
 	var cssLoader = {
 		loader: 'css-loader',
 		options: {
-			sourceMap: options.sourceMap,
-			modules: true,
+			// sourceMap: options.sourceMap,
+			// modules: true,
 			//localIdentName: '[local]--[hash:base64:6]',	//class 名字 代替
 			//localIdentName: booLocal ? '[local]' : '[local]--[hash:base64:6]',	//class 名字 代替
-			localIdentName: '[local]',
-			importLoaders: 1,
+			// localIdentName: '[local]',
+			// importLoaders: 1,
 		}
 	};
 	var postcssLoader = {
@@ -66,7 +66,6 @@ exports.cssLoaders = function (options, booLocal) {
 		}
 	}
 
-	// https://vue-loader.vuejs.org/en/configurations/extract-css.html
 	return {
 		css: generateLoaders(),
 		postcss: generateLoaders('postcss'),
